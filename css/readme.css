@@ -1,27 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:ital,wght@0,600;1,600;1,700&family=Roboto:wght@300;400;700&display=swap');*
-{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:ital,wght@0,600;1,600;1,700&family=Roboto:wght@300;400;700&display=swap");
+* {
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-decoration: none;
 }
 
-
-
-body 
-{
+body {
   /* display: flex; */
-  color: rgb(144, 0, 255) ;
+  color: rgb(144, 0, 255);
   justify-content: center;
   align-items: center;
   min-height: auto;
   min-width: auto;
   background: #000;
 }
-section 
-{
+section {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -32,28 +28,23 @@ section
   flex-wrap: wrap;
   overflow: hidden;
 }
-section::before 
-{
-  content: '';
+section::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#000,rgb(144, 0, 255),#000);
+  background: linear-gradient(#000, rgb(144, 0, 255), #000);
   animation: animate 5s linear infinite;
 }
-@keyframes animate 
-{
-  0%
-  {
+@keyframes animate {
+  0% {
     transform: translateY(-100%);
   }
-  100%
-  {
+  100% {
     transform: translateY(100%);
   }
 }
-section span 
-{
+section span {
   position: relative;
   display: block;
   width: calc(6.25vw - 2px);
@@ -62,22 +53,20 @@ section span
   z-index: 2;
   transition: 1.5s;
 }
-section span:hover 
-{
+section span:hover {
   background: rgb(144, 0, 255);
   transition: 0s;
 }
 
-section .readme
-{
+section .readme {
   position: absolute;
   width: 80%;
   height: 80%;
-  background: #222;  
+  background: #222;
   z-index: 1000;
   padding: 40px;
   border-radius: 4px;
-  box-shadow: 0 15px 35px rgba(0,0,0,9);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
@@ -94,14 +83,14 @@ nav {
   text-align: center;
 }
 
-.logo{
+.logo {
   display: block;
   color: rgb(144, 0, 255);
   font-size: 30px;
   font-weight: 600;
 }
 
-nav .active{
+nav .active {
   display: inline-block;
   text-decoration: none;
   color: rgb(144, 0, 255);
@@ -109,10 +98,8 @@ nav .active{
   font-weight: 600;
 }
 
-
 /* start css menu */
-nav .menu{
-
+nav .menu {
   max-width: 1200px;
   /* margin: auto; */
   display: flex;
@@ -121,7 +108,7 @@ nav .menu{
   padding: 0 20px;
 }
 
-.menu ul{
+.menu ul {
   position: absolute;
   right: 200px;
   /* text-align: right;
@@ -129,11 +116,11 @@ nav .menu{
   display: flex;
   justify-content: space-between;
 }
-.menu ul li{
+.menu ul li {
   list-style: none;
   margin-left: 10px;
 }
-.menu ul li .active{
+.menu ul li .active {
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -146,15 +133,15 @@ nav .menu{
   color: #000;
 }
 
-.menu ul li .active:hover{
-  border:rgb(144, 0, 255) solid ;
+.menu ul li .active:hover {
+  border: rgb(144, 0, 255) solid;
   /* background: rgb(144, 0, 255); */
-  color:white ;
+  color: white;
 }
 
 /* start icon */
 
-nav #icon{
+/* nav #icon{
   color: white;
   font-size: 30px;
   line-height: 80px;
@@ -162,9 +149,9 @@ nav #icon{
   margin-right: 40px;
   cursor: pointer;
   display: none;
-}
+} */
 
-@media (max-with: 1048px) {
+/* @media screen and (max-with: 1048px) {
   label.logo{
       font-size: 32px;
       padding-left: 60px; 
@@ -175,9 +162,9 @@ nav #icon{
   nav a{
       font-size: 17px;
   }
-}
+} */
 
-@media (max-with: 909px) {
+/* @media screen and (max-with: 909px) {
   nav #icon{
       display: block;
   }
@@ -202,31 +189,55 @@ nav #icon{
       border: none;
       color: #a934db;
   }
+} */
+
+@media screen and (max-width: 900px) {
+  #main-menu {
+    flex-direction: column;
+    text-align: center;
+  }
+  #logo{
+    display: block;
+    text-align: center;
+  }
+  nav{
+    display: none;
+  }
 }
 
+@media screen and (max-width: 768px) {
+  #main-menu {
+      flex-direction: column;
+      text-align: center;
+  }
+  #logo {
+      display: block;
+      text-align: center;
+  }
+  nav {
+      display: none;
+  }
+}
 
 /* end icon */
 
-
-
 /* end css menu */
 
-.typing{
-  color: rgb(144, 0, 255) ;
+.typing {
+  color: rgb(144, 0, 255);
   text-align: center;
-  padding-top:5em;
+  padding-top: 5em;
   list-style: none;
   width: 100%;
   text-align: center;
 }
 
-.typewrite{
-  
+.typewrite {
   width: 200px;
   text-decoration: none;
 }
 
-.wrap{
+.wrap {
   font-weight: 800;
   font-style: italic;
   text-decoration: none;
@@ -234,14 +245,11 @@ nav #icon{
   background-color: #222;
   width: auto;
 }
-.wrap:hover{
+.wrap:hover {
   background-color: #222;
 }
 
-
-
-section .readme .logo 
-{
+section .readme .logo {
   position: relative;
   width: 100%;
   display: flex;
@@ -258,7 +266,6 @@ section .readme .logo
   color: rgb(144, 0, 255);
   text-transform: uppercase;
 } */
-
 
 /* section .readme .content .form 
 {
@@ -342,16 +349,14 @@ input[type="submit"]:active
     height: calc(10vw - 2px);
   }
 } */
-@media (max-width: 600px)
-{
-  section span 
-  {
+@media (max-width: 600px) {
+  section span {
     width: calc(20vw - 2px);
     height: calc(20vw - 2px);
   }
 }
 
-.icon-container{
+.icon-container {
   text-align: center;
   display: flex;
   align-content: normal;
@@ -362,21 +367,23 @@ input[type="submit"]:active
   padding-top: 50px;
 }
 
-.icon-space{
+.icon-space {
   padding: 20px;
 }
-.icon{
+.icon {
   list-style: none;
   color: #9000ff;
   size: 100px;
   border-radius: 50%;
   text-align: center;
 }
-.icon:hover{
+.icon:hover {
   color: white;
   /* box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px; */
   -webkit-transition: 0.7s;
-  box-shadow: rgba(255 , 255, 255, 0.07) 0px 1px 2px, rgba(255 , 255, 255, 0.07) 0px 2px 4px, rgba(255 , 255, 255, 0.07) 0px 4px 8px, rgba(255 , 255, 255, 0.07) 0px 8px 16px, rgba(255 , 255, 255, 0.07) 0px 16px 32px, rgba(255 , 255, 255, 0.07) 0px 32px 64px;
+  box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px,
+    rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px,
+    rgba(255, 255, 255, 0.07) 0px 8px 16px,
+    rgba(255, 255, 255, 0.07) 0px 16px 32px,
+    rgba(255, 255, 255, 0.07) 0px 32px 64px;
 }
-
-
